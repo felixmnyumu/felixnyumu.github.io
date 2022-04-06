@@ -155,7 +155,7 @@ button{
 .section-title{
     padding: 0 15px;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 }
 .section-title h2{
     font-size: 40px;
@@ -763,24 +763,36 @@ About Section
 .contact-section.active{
     display: flex;
 }
+.contact-section .row{
+    display: grid;
+    grid-row: 1fr 1fr;
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
 .contact-content{
     max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
     width: 100%;
     margin: auto;
     text-align: center;
     padding: 0 15px;
 }
 .contact-text{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .contact-text span{
     font-style: italic;
 }
 .contact-info-item{
-    margin-bottom: 10px;
+    margin-bottom: 18px;
+    width: 100%;
 }
 .contact-info-item p{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -798,7 +810,7 @@ About Section
     color: var(--white-light);
     border-radius: 50%;
     transition: all 0.3s ease;
-    margin: 0 3px;
+    margin: 0 1px;
 }
 .contact-info-item .social-links a:hover{
     color: var(--main-color);
@@ -821,6 +833,10 @@ About Section
     .portfolio-item{
         width: calc(50% - 30px);
     }
+    .contact-content{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 @media(max-width:767px){
     .bg-animation-effect .col-7,
@@ -832,6 +848,10 @@ About Section
     }
     .portfolio-item{
         width: calc(100% - 30px);
+    }
+    .contact-content{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 @media(max-width:575px){
@@ -848,5 +868,10 @@ About Section
     .skills .skill-item{
         margin-right: 10px;
         margin-bottom: 10px;
+    }
+    
+    .contact-content{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
