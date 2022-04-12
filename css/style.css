@@ -422,7 +422,7 @@ About Section
     padding: 120px 15px;
 }
 .about-content{
-    max-width: 700px;
+    max-width: 680px;
     width: 100%;
     margin: auto;
     text-align: center;
@@ -434,8 +434,8 @@ About Section
     margin: 0 0 15px;
 }
 .about-content h1{
-    font-size: 28px;
-    margin: 0 0 8px;
+    font-size: 26px;
+    margin: 0 0 6px;
 }
 .about-content p span{
     font-weight: 600;
