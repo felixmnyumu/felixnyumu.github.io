@@ -33,10 +33,11 @@ body{
     line-height: 1.5;
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
-    color: var(--white-light);
-    background-color: var(--dark);
+    color: var(--dark-light);
+    background-color: var(--white);
     -webkit-top-highlight-color: transparent;
     overflow-x: hidden;
+    transition: background 0.2s linear;
 }
 body.hide-scrolling{
     overflow-y: hidden;
@@ -49,7 +50,7 @@ img{
     vertical-align: middle;
 }
 h1,h2,h3,h4,h5,h6{
-    color: var(--white);
+    color: var(--dark);
     font-weight: 600;
 }
 ul{
@@ -113,7 +114,7 @@ button{
     top: 0;
     height: 100%;
     width: 100%;
-    border: 1px solid var(--white);
+    border: 1px solid var(--dark-light);
     transform: translate(4px, 4px);
     transition: transform 0.3s ease;
     pointer-events: none;
@@ -164,6 +165,7 @@ button{
     font-size: 40px;
     text-transform: capitalize;
     text-align: center;
+    color: var(--dark);
 }
 /* Custom Scrollbar */
 ::-webkit-scrollbar{
@@ -193,7 +195,7 @@ button{
 }
 .overlay-effect-item{
     height: 10vh;
-    background-color: var(--dark-light);
+    background-color: var(--white-light);
     transition: all 0.5s ease;
 }
 .overlay-effect-item:nth-child(odd){
@@ -233,6 +235,127 @@ button{
     transition-delay: 0.45s;
 }
 
+/* website theme */
+.theme{
+    padding: 25px 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.theme .container .checkbox{
+    opacity: 0;
+    position: absolute;
+    margin-left: 15px;
+    cursor: pointer;
+}
+body.dark .btn::before{
+    border: 1px solid var(--white-light);
+}
+body.dark{
+    background-color: var(--dark);
+}
+body.dark p{
+    color: var(--white-light);
+}
+body.dark h1,h2,h3,h4,h5,h6{
+    color: var(--white-light);
+}
+body.dark .header .nav-toggler span,
+body.dark .header .nav-toggler span::before,
+body.dark .header .nav-toggler span::after{
+    background-color: var(--white);
+}
+body.dark .header .nav-toggler.active span{
+    background-color: transparent;
+}
+body.dark .header .nav-inner ul a{
+    color: var(--white-light);
+}
+body.dark .header .nav-inner ul a::before{
+    background-color: var(--dark);
+}
+body.dark .header .nav-inner ul a:hover{
+    color: var(--main-color);
+}
+body.dark .overlay-effect-item{
+    background-color: var(--dark-light);
+}
+body.dark .section-title h2{
+    color: var(--white-light);
+}
+body.dark .contact-info-item .social-links a{
+    border: 1px solid var(--white-light);
+    color: var(--white-light);
+}
+body.dark .filter-status{
+    background-color: var(--dark-light);
+}
+body.dark .filter-status p{
+    color: var(--white);
+}
+body.dark .portfolio-item-thumbnail::before,
+body.dark .portfolio-item-thumbnail::after{
+    background-color: var(--dark);
+}
+body.dark .portfolio-popup::before,
+body.dark .portfolio-popup::after{
+    background-color: var(--dark-light);
+}
+body.dark .pp-overlay::before{
+    background-color: var(--dark-light);
+}
+body.dark .page-loader{
+    background-color: var(--dark-light);
+    color: var(--white-light);
+}
+body.dark .page-loader .circle{
+    border: 2px solid var(--white-light);
+}
+body.dark .portfolio-item h3{
+    color: var(--white-light);
+}
+body.dark .pp-header h3{
+    color: var(--white-light);
+}
+body.dark .pp-footer h3{
+    color: var(--white-light);
+}
+body.dark .pp-counter{
+    color: var(--white-light);
+}
+.label{
+    background-color: var(--white-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+}
+.ball{
+    background-color: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transition: transform 0.2s linear;
+}
+.theme .container .checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+.fa-moon{
+    color: var(--main-color);
+}
+.fa-sun{
+    color: var(--main-color);
+}
+
 /* Page Loader */
 .page-loader{
     position: fixed;
@@ -240,8 +363,8 @@ button{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--dark-light);
-    color: var(--white-light);
+    background-color: var(--white-light);
+    color: var(--dark-light);
     z-index: 999;
     display: flex;
     align-items: center;
@@ -264,7 +387,7 @@ button{
 .page-loader .circle{
     height: 30px;
     width: 30px;
-    border: 2px solid var(--white-light);
+    border: 2px solid var(--dark-light);
     border-right-color: transparent;
     border-radius: 50%;
     margin-right: 15px;
@@ -309,7 +432,7 @@ button{
 .header .nav-toggler span{
     height: 2px;
     width: 30px;
-    background-color: var(--white);
+    background-color: var(--dark);
     display: inline-block;
     position: relative;
     transition: all 0.3s ease;
@@ -324,7 +447,7 @@ button{
     top: 0;
     height: 2px;
     width: 50%;
-    background-color: var(--white);
+    background-color: var(--dark);
     transition: all 0.3s ease;
 }
 .header .nav-toggler span::before{
@@ -393,7 +516,7 @@ button{
     padding: 8px 0;
     text-transform: capitalize;
     font-weight: 600;
-    color: var(--white);
+    color: var(--dark);
     position: relative;
     transition: all 0.3s ease;
 }
@@ -402,7 +525,7 @@ button{
     position: absolute;
     height: 100px;
     width: 100px;
-    background-color: var(--dark);
+    background-color: var(--white);
     border-radius: 50%;
     left: 0;
     top: calc(50% - 50px);
@@ -486,21 +609,6 @@ About Section
     display: inline-block;
     cursor: pointer;
 }
-.wrappa {
-    padding: 4px 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    background-color: var(--dark-light);
-    color: var(--white-light);
-    text-transform: capitalize;
-    margin: 0 4px 10px;
-    display: inline-block;
-    cursor: pointer;
-}
-.wrappa a{
-    color: var(--white-light);
-}
 .portfolio-filter-btn.active{
     background-color: var(--main-color);
     color: var(--white);
@@ -512,7 +620,7 @@ About Section
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--dark-light);
+    background-color: var(--white-light);
     z-index: 201;
     display: flex;
     align-items: center;
@@ -529,7 +637,7 @@ About Section
 .filter-status p{
     font-size: 20px;
     text-transform: capitalize;
-    color: var(--white);
+    color: var(--dark);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -558,7 +666,7 @@ About Section
     left: 0;
     height: 0%;
     width: 100%;
-    background-color: var(--dark-light);
+    background-color: var(--white);
     opacity: 0.8;
     transition: height 0.3s ease;
 }
@@ -593,6 +701,7 @@ About Section
     font-size: 20px;
     margin: 10px 0 5px;
     text-transform: capitalize;
+    color: var(--dark);
 }
 .portfolio-item-details{
     display: none;
@@ -617,7 +726,7 @@ About Section
     position: absolute;
     height: 50%;
     width: 0%;
-    background-color: var(--dark-light);
+    background-color: var(--white-light);
     z-index: -1;
     transition: all 0.5s ease 0.5s;
 }
@@ -654,10 +763,13 @@ About Section
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--dark);
+    background-color: var(--white-light);
 }
 .pp-overlay.next::before{
     animation: nextItem 1s ease forwards;
+}
+.pp-counter{
+    color: var(--dark);
 }
 @keyframes nextItem{
     0%{
@@ -724,6 +836,7 @@ About Section
 .pp-header h3{
     font-size: 28px;
     text-transform: capitalize;
+    color: var(--dark);
 }
 .pp-body{
     padding: 15px 0;
@@ -757,6 +870,7 @@ About Section
     text-transform: capitalize;
     font-size: 20px;
     margin: 30px 0 15px;
+    color: var(--dark);
 }
 .pp-footer img{
     max-width: 120px;
@@ -803,12 +917,12 @@ About Section
 .contact-info-item .social-links a{
     height: 40px;
     width: 40px;
-    border: 1px solid var(--white-light);
+    border: 1px solid var(--dark);
     font-size: 16px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--white-light);
+    color: var(--dark);
     border-radius: 50%;
     transition: all 0.3s ease;
     margin: 0 1px;
@@ -823,6 +937,12 @@ About Section
 
 /* Responsive */
 @media(max-width:991px){
+    .overlay-effect-item{
+        height: 100%;
+    }
+    .theme{
+        margin-left: 15px;
+    }
     .bg-animation-effect .col-10,
     .bg-animation-effect .col-9,
     .bg-animation-effect .col-8{
@@ -840,6 +960,12 @@ About Section
     }
 }
 @media(max-width:767px){
+    .overlay-effect-item{
+        height: 100%;
+    }
+    .theme{
+        margin-left: 15px;
+    }
     .bg-animation-effect .col-7,
     .bg-animation-effect .col-6{
         display: none;
@@ -856,6 +982,12 @@ About Section
     }
 }
 @media(max-width:575px){
+    .overlay-effect-item{
+        height: 100%;
+    }
+    .theme{
+        margin-left: 15px;
+    }
     .pp-footer h3{
         font-size: 16px;
     }

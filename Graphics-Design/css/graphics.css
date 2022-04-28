@@ -32,8 +32,8 @@ body{
     line-height: 1.5;
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
-    color: var(--white-light);
-    background-color: var(--dark);
+    color: var(--dark-light);
+    background-color: var(--white);
     -webkit-top-highlight-color: transparent;
     overflow-x: hidden;
 }
@@ -48,7 +48,7 @@ img{
     vertical-align: middle;
 }
 h1,h2,h3,h4,h5,h6{
-    color: var(--white);
+    color: var(--dark);
     font-weight: 600;
 }
 .container{
@@ -106,7 +106,7 @@ button{
     top: 0;
     height: 100%;
     width: 100%;
-    border: 1px solid var(--white);
+    border: 1px solid var(--dark-light);
     transform: translate(4px, 4px);
     transition: transform 0.3s ease;
     pointer-events: none;
@@ -157,6 +157,7 @@ button{
     font-size: 40px;
     text-transform: capitalize;
     text-align: center;
+    color: var(--dark);
 }
 /* Custom Scrollbar */
 ::-webkit-scrollbar{
@@ -168,6 +169,116 @@ button{
 ::-webkit-scrollbar-thumb{
     background-color: var(--main-color);
 }
+
+/* website theme */
+.theme{
+    padding: 25px 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+body.dark .btn::before{
+    border: 1px solid var(--white-light);
+}
+body.dark{
+    background-color: var(--dark);
+}
+body.dark p{
+    color: var(--white-light);
+}
+body.dark h1,h2,h3,h4,h5,h6{
+    color: var(--white-light);
+}
+body.dark .header .nav-toggler span{
+    background-color: var(--white);
+}
+body.dark .header .nav-toggler span::before,
+body.dark .header .nav-toggler span::after{
+    background-color: var(--white);
+}
+body.dark .overlay-effect-item{
+    background-color: var(--dark-light);
+}
+body.dark .section-title h2{
+    color: var(--white-light);
+}
+body.dark .contact-info-item .social-links a{
+    border: 1px solid var(--white-light);
+    color: var(--white-light);
+}
+body.dark .filter-status{
+    background-color: var(--dark-light);
+}
+body.dark .filter-status p{
+    color: var(--white);
+}
+body.dark .portfolio-item-thumbnail::before,
+body.dark .portfolio-item-thumbnail::after{
+    background-color: var(--dark);
+}
+body.dark .portfolio-popup::before,
+body.dark .portfolio-popup::after{
+    background-color: var(--dark-light);
+}
+body.dark .pp-overlay::before{
+    background-color: var(--dark-light);
+}
+body.dark .page-loader{
+    background-color: var(--dark-light);
+    color: var(--white-light);
+}
+body.dark .page-loader .circle{
+    border: 2px solid var(--white-light);
+}
+body.dark .portfolio-item h3{
+    color: var(--white-light);
+}
+body.dark .pp-header h3{
+    color: var(--white-light);
+}
+body.dark .pp-footer h3{
+    color: var(--white-light);
+}
+body.dark .pp-counter{
+    color: var(--white-light);
+}
+.theme .container .checkbox{
+    opacity: 0;
+    position: relative;
+    margin-left: 15px;
+}
+.label{
+    background-color: var(--white-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+}
+.ball{
+    background-color: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transition: transform 0.2s linear;
+}
+.theme .container .checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+.fa-moon{
+    color: var(--main-color);
+}
+.fa-sun{
+    color: var(--main-color);
+}
+
 /* Portfolio Section */
 .portfolio-section{
     padding-bottom: 70px;
@@ -248,7 +359,7 @@ button{
     left: 0;
     height: 0%;
     width: 100%;
-    background-color: var(--dark-light);
+    background-color: var(--white-light);
     opacity: 0.8;
     transition: height 0.3s ease;
 }
@@ -283,6 +394,7 @@ button{
     font-size: 20px;
     margin: 10px 0 5px;
     text-transform: capitalize;
+    color: var(--dark);
 }
 .portfolio-item-details{
     display: none;
@@ -307,7 +419,7 @@ button{
     position: absolute;
     height: 50%;
     width: 0%;
-    background-color: var(--dark-light);
+    background-color: var(--white-light);
     z-index: -1;
     transition: all 0.5s ease 0.5s;
 }
@@ -344,7 +456,7 @@ button{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--dark);
+    background-color: var(--white-light);
 }
 .pp-overlay.next::before{
     animation: nextItem 1s ease forwards;
@@ -414,6 +526,7 @@ button{
 .pp-header h3{
     font-size: 28px;
     text-transform: capitalize;
+    color: var(--dark);
 }
 .pp-body{
     padding: 15px 0;
@@ -447,9 +560,13 @@ button{
     text-transform: capitalize;
     font-size: 20px;
     margin: 30px 0 15px;
+    color: var(--dark);
 }
 .pp-footer img{
     max-width: 120px;
+}
+.pp-counter{
+    color: var(--dark);
 }
 /* Responsive */
 @media(max-width:991px){

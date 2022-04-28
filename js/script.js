@@ -6,6 +6,13 @@ window.addEventListener("load", () => {
         document.querySelector(".page-loader").style.display = "none";
     }, 1000);
 });
+/*----------------- Website Theme -----------------------------*/
+const checkbox = document.getElementById('checkbox');
+
+checkbox.addEventListener('change',() => {
+    // change website theme
+    document.body.classList.toggle('dark');
+});
 
 /*----------------- Bg Animation Efect ------------------------*/
 function bgAnimationItems(){
