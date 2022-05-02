@@ -325,8 +325,14 @@ body.dark .pp-footer h3{
 body.dark .pp-counter{
     color: var(--white-light);
 }
-.label{
+body.dark .label{
     background-color: var(--white-light);
+}
+body.dark .ball{
+    background-color: var(--dark);
+}
+.label{
+    background-color: var(--dark);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -337,7 +343,7 @@ body.dark .pp-counter{
     width: 50px;
 }
 .ball{
-    background-color: var(--white);
+    background-color: var(--white-light);
     border-radius: 50%;
     position: absolute;
     top: 2px;
