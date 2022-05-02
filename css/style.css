@@ -32,7 +32,7 @@ body{
     font-size: 16px;
     line-height: 1.5;
     font-family: 'Nunito', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     color: var(--dark-light);
     background-color: var(--white);
     -webkit-top-highlight-color: transparent;
