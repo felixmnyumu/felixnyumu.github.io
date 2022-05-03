@@ -331,6 +331,10 @@ body.dark .label{
 body.dark .ball{
     background-color: var(--dark);
 }
+body.dark .about-content img{
+    border: 5px solid var(--dark-light);
+    color: var(--white);
+}
 .label{
     background-color: var(--dark);
     display: flex;
@@ -561,7 +565,7 @@ About Section
 }
 .about-content img{
     max-width: 150px;
-    border: 5px solid var(--dark-light);
+    border: 5px solid var(--white-light);
     border-radius: 50%;
     margin: 0 0 15px;
 }
