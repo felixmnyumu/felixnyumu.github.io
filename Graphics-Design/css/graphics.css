@@ -586,7 +586,7 @@ body.dark .ball{
         width: 100%;
     }
     .pp-inner{
-        width: calc(100% - 15px);
+        width: calc(100% - 50px);
     }
 }
 @media(max-width:767px){
@@ -597,7 +597,7 @@ body.dark .ball{
         width: 100%;
     }
     .pp-inner{
-        width: calc(100% - 15px);
+        width: calc(100% - 50px);
     }
 }
 @media(max-width:575px){
@@ -611,6 +611,6 @@ body.dark .ball{
         width: 100%;
     }
     .pp-inner{
-        width: calc(100% - 15px);
+        width: calc(100% - 50px);
     }
 }
