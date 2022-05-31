@@ -582,22 +582,10 @@ body.dark .ball{
     .portfolio-item{
         width: calc(50% - 30px);
     }
-    .portfolio-popup{
-        width: 100%;
-    }
-    .pp-inner{
-        width: calc(100% - 50px);
-    }
 }
 @media(max-width:767px){
     .portfolio-item{
         width: calc(100% - 30px);
-    }
-    .portfolio-popup{
-        width: 100%;
-    }
-    .pp-inner{
-        width: calc(100% - 50px);
     }
 }
 @media(max-width:575px){
@@ -606,11 +594,5 @@ body.dark .ball{
     }
     .pp-footer h3{
         font-size: 16px;
-    }
-    .portfolio-popup{
-        width: 100%;
-    }
-    .pp-inner{
-        width: calc(100% - 50px);
     }
 }
