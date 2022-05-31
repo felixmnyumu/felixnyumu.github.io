@@ -866,7 +866,7 @@ About Section
     color: var(--main-color);
 }
 .pp-footer{
-    padding: 40px 0 0;
+    padding: 10px 0 0;
     display: flex;
 }
 .pp-footer-left,
@@ -964,6 +964,12 @@ About Section
     .portfolio-item{
         width: calc(50% - 30px);
     }
+    .portfolio-popup{
+        width: 100%;
+    }
+    .pp-inner{
+        width: calc(100% - 15px);
+    }
     .contact-content{
         display: flex;
         flex-wrap: wrap;
@@ -986,6 +992,12 @@ About Section
     .portfolio-item{
         width: calc(100% - 30px);
     }
+    .portfolio-popup{
+        width: 100%;
+    }
+    .pp-inner{
+        width: calc(100% - 15px);
+    }
     .contact-content{
         display: flex;
         flex-wrap: wrap;
@@ -1000,6 +1012,12 @@ About Section
     }
     .pp-footer h3{
         font-size: 16px;
+    }
+    .portfolio-popup{
+        width: 100%;
+    }
+    .pp-inner{
+        width: calc(100% - 15px);
     }
     .contact-info-item p{
         font-size: 18px;
