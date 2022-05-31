@@ -964,11 +964,11 @@ About Section
     .portfolio-item{
         width: calc(50% - 30px);
     }
-    .portfolio-popup{
+   .portfolio-popup{
         width: 100%;
     }
     .pp-inner{
-        width: calc(100% - 15px);
+        width: calc(100% - 50px);
     }
     .contact-content{
         display: flex;
@@ -996,7 +996,7 @@ About Section
         width: 100%;
     }
     .pp-inner{
-        width: calc(100% - 15px);
+        width: calc(100% - 50px);
     }
     .contact-content{
         display: flex;
@@ -1013,11 +1013,11 @@ About Section
     .pp-footer h3{
         font-size: 16px;
     }
-    .portfolio-popup{
+   .portfolio-popup{
         width: 100%;
     }
     .pp-inner{
-        width: calc(100% - 15px);
+        width: calc(100% - 50px);
     }
     .contact-info-item p{
         font-size: 18px;
