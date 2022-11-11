@@ -395,6 +395,7 @@ body.dark .ball{
 }
 .portfolio-item img{
     width: 100%;
+    border-radius: 8px;
 }
 .portfolio-item h3{
     font-size: 20px;
@@ -424,7 +425,7 @@ body.dark .ball{
     content: '';
     position: absolute;
     height: 50%;
-    width: 0%;
+    width: 100%;
     background-color: var(--white-light);
     z-index: -1;
     transition: all 0.5s ease 0.5s;
@@ -584,6 +585,9 @@ body.dark .ball{
     }
 }
 @media(max-width:767px){
+    .theme{
+        margin-left: 15px;
+    }
     .portfolio-item{
         width: calc(100% - 30px);
     }
