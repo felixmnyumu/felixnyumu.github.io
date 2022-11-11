@@ -13,8 +13,7 @@ Variables
     --dark-light: #32323a;
     --white: #f0f8ff;
     --white-light: #c8c8c8;
-}
-
+} 
 /*--------------
 Global Settings
 ---------------*/
@@ -555,7 +554,7 @@ body.dark .about-content img{
 About Section
 --------------*/
 .about-section .min-vh-100{
-    padding: 120px 15px;
+    padding: 15px 15px;
 }
 .about-content{
     max-width: 680px;
@@ -657,6 +656,9 @@ About Section
 .filter-status p span{
     font-weight: 600;
 }
+.portfolio-items{
+    width: 100%;
+}
 .portfolio-item{
     width: calc((100% /3) - 30px);
     margin: 0 15px 30px;
@@ -706,6 +708,7 @@ About Section
 }
 .portfolio-item img{
     width: 100%;
+    border-radius: 8px;
 }
 .portfolio-item h3{
     font-size: 20px;
@@ -731,7 +734,8 @@ About Section
     visibility: visible;
 }
 .portfolio-popup::before,
-.portfolio-popup::after{
+.portfolio-popup::after
+{
     content: '';
     position: absolute;
     height: 50%;
@@ -945,6 +949,19 @@ About Section
     margin-top: 10px;
 }
 
+/* Copyright */
+.copyright{
+    width: 100%;
+    margin-top: 10px;
+}
+.copyright p{
+    font-size: 14px;
+    font-style: oblique;
+    font-weight: 700;
+    color: var(--dark);
+    text-align: center;
+}
+
 /* Responsive */
 @media(max-width:991px){
     .overlay-effect-item{
@@ -1012,7 +1029,6 @@ About Section
         margin-right: 10px;
         margin-bottom: 10px;
     }
-    
     .contact-content{
         display: flex;
         flex-wrap: wrap;
