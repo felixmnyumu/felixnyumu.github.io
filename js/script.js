@@ -14,18 +14,6 @@ checkbox.addEventListener('change',() => {
     document.body.classList.toggle('dark');
 });
 
-/*----------------- Bg Animation Efect ------------------------*/
-function bgAnimationItems(){
-    const rows = 7, cols = 10;
-    for(let i = 0; i < rows; i++){
-        for(let j = 0; j < cols; j++){
-            const div = document.createElement("div");
-            div.className = 'col-${j+1}';
-            document.querySelector(".bg-animation-effect").appendChild(div);
-        }
-    }
-}
-bgAnimationItems();
 
 /*----------------------------- Toggle Navbar ------------------------------------*/
 const navToggler = document.querySelector(".nav-toggler");
